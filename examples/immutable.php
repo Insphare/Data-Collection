@@ -7,13 +7,6 @@ include_once '../bootstrap.php';
  */
 
 $arrConfigFromDataBase = array(
-	0 => 'hello dear, my name is earl.',
-	1 => 'how are you today?',
-	2 => 'are you looking for a new job as php engineer?'
-);
-
-
-$arrConfigFromDataBase = array(
 	'username'	=> 'phpuser',
 	'password'	=> 'phpfish',
 	'port'		=> '9',
