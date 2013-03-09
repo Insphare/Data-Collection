@@ -1,0 +1,47 @@
+<phpunit backupGlobals="false"
+		 backupStaticAttributes="false"
+		 bootstrap="../bootstrap.php"
+		 colors="true"
+		 convertErrorsToExceptions="true"
+		 convertNoticesToExceptions="true"
+		 convertWarningsToExceptions="true"
+		 processIsolation="false"
+		 stopOnFailure="false"
+		 syntaxCheck="false"
+		 testSuiteLoaderClass="PHPUnit_Runner_StandardTestSuiteLoader">
+	<php>
+		<ini name="memory_limit" value="2048M"/>
+		<ini name="max_execution_time" value="-1"/>
+	</php>
+	<groups>
+		<exclude>
+			<group>slow</group>
+			<group>createsFatalError</group>
+		</exclude>
+	</groups>
+
+	<testsuites>
+		<testsuite name="UnitTests">
+			<directory>unit</directory>
+		</testsuite>
+	</testsuites>
+
+	<filter>
+		<whitelist>
+			<directory suffix=".php">../InsphareBaseCode</directory>
+			<!--<directory suffix=".php">../Controller</directory>-->
+			<!--<directory suffix=".php">../lib</directory>-->
+			<!--<directory suffix=".php">../model</directory>-->
+
+			<!--<exclude>-->
+				<!--<directory suffix=".xml">../app/Data/Entity</directory>-->
+				<!--<directory suffix=".xml">../app/Service</directory>-->
+				<!--<directory suffix=".php">../lib/Maintenance</directory>-->
+				<!--<directory suffix=".php">../ext</directory>-->
+				<!--<directory suffix=".php">./fixtures</directory>-->
+				<!--<file>../lib/i18n.php</file>-->
+				<!--<file>../bootstrap.php</file>-->
+			<!--</exclude>-->
+		</whitelist>
+	</filter>
+</phpunit>
